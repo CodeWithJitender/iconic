@@ -197,7 +197,7 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 2500,
         centerMode: true,
         centerPadding: "20%",
         arrows: false,
@@ -209,7 +209,7 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 2500,
         centerMode: false,
         arrows: false,
     });
