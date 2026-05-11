@@ -31,9 +31,11 @@
       --tw-gradient-to: rgba(255, 237, 126, 0) var(--tw-gradient-to-position);
       --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
+
     .to-hf-gold {
       --tw-gradient-to: #CCA14D var(--tw-gradient-to-position);
     }
+
     @media (min-width: 768px) {
       .md\:top-\[20\%\] {
         top: 20%;
@@ -74,7 +76,7 @@
   </style>
 </head>
 
-<body class="min-h-full flex flex-col font-sans bg-[#161F48] text-white">
+<body class="min-h-full flex flex-col font-sans bg-[#161F48] text-white overflow-x-hidden">
 
   <main class="font-sans bg-hf-navy text-white overflow-x-hidden">
 
@@ -117,10 +119,11 @@
         class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pt-[200px] sm:pt-40 lg:pt-56 pb-16 lg:pb-24 flex flex-col lg:flex-row gap-12 items-center">
 
         <!-- Left Column (Text & Bottom Info Box) -->
-        <div class="flex-1 flex flex-col justify-between w-full pb-8 lg:pb-0 gap-16 lg:gap-60">
+        <div
+          class="flex-1 flex flex-col justify-between items-center lg:items-start text-center lg:text-left w-full pb-8 lg:pb-0 gap-16 lg:gap-60">
 
           <!-- Top Heading -->
-          <div class="relative hero-title">
+          <div class="relative hero-title w-full">
             <h1
               class="relative z-10 text-[28px] sm:text-5xl lg:text-[3.5rem] font-sans font-semibold leading-[1.2] tracking-tight w-full drop-shadow-lg bg-gradient-to-b from-hf-gold-2 to-hf-gold bg-clip-text text-transparent">
               Own a Home Where Quality Is Engineered, Not Promised.
@@ -129,17 +132,17 @@
 
           <!-- Bottom Info Box -->
           <div
-            class="hero-box bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl md:rounded-[2rem] p-5 sm:p-6 md:p-8 w-full max-w-xl shadow-2xl">
+            class="hero-box bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl md:rounded-[2rem] p-5 sm:p-6 md:p-8 w-full max-w-xl shadow-2xl flex flex-col items-center lg:items-start">
             <p class="text-[16px] sm:text-xl md:text-2xl font-medium mb-6 md:mb-8 leading-snug">
               Low-density high-rise living, backed by a developer that builds everything in-house.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 w-full sm:w-auto">
               <button
-                class="modal-open w-full bg-white text-black font-semibold px-4 py-2.5 sm:px-6 sm:py-3 text-[13px] sm:text-base rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer">
+                class="modal-open w-full sm:w-auto bg-white text-black font-semibold px-4 py-2.5 sm:px-6 sm:py-3 text-[13px] sm:text-base rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer">
                 Get Price & Availability
               </button>
               <button
-                class="modal-open w-full bg-white text-black font-semibold px-4 py-2.5 sm:px-6 sm:py-3 text-[13px] sm:text-base rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer">
+                class="modal-open w-full sm:w-auto bg-white text-black font-semibold px-4 py-2.5 sm:px-6 sm:py-3 text-[13px] sm:text-base rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer">
                 Speak to an Advisor
               </button>
             </div>
@@ -191,17 +194,11 @@
       </section>
     </div>
 
-    <!-- Mobile Overview Image -->
-    <section data-aos="fade-up" data-aos-duration="1000"
-      class="w-full md:hidden flex justify-center items-center pointer-events-none overflow-hidden">
-      <div class="anim-breathe w-full">
-        <img src="./public/overview-mobile.jpg" alt="Sobha Rivana Overview" class="w-full h-auto object-cover" />
-      </div>
-    </section>
+
 
     <!-- Overview Section -->
     <section
-      class="fade-up-section relative w-full bg-transparent hidden md:flex flex-col justify-center items-center py-16 md:py-32">
+      class="fade-up-section relative w-full bg-transparent flex flex-col justify-center items-center py-16 md:py-32">
 
       <!-- Building Background Image with fade masks -->
       <div class="absolute inset-0 w-full h-full z-0">
@@ -234,7 +231,7 @@
         </div>
 
         <div
-          class="relative md:absolute md:top-[60%] md:left-[50%] md:-translate-x-1/2 bg-black/30 backdrop-blur-xl border border-white/30 px-8 sm:px-12 py-3 sm:py-4 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.3)] w-full md:w-auto text-center anim-float-3">
+          class="relative md:absolute md:top-[50%] md:-translate-y-1/2 md:left-[50%] md:-translate-x-1/2 bg-black/30 backdrop-blur-xl border border-white/30 px-8 sm:px-12 py-3 sm:py-4 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.3)] w-full md:w-auto text-center anim-float-3">
           <p class="text-white text-[14px] sm:text-base md:text-lg font-medium tracking-wide">4 BHK + Study (~4020 sq.
             ft.)</p>
         </div>
@@ -368,7 +365,7 @@
 
     <!-- Get A Closer Look Section -->
     <section
-      class="closer-look-section relative w-full min-h-[60vh] md:min-h-[700px] py-16 md:py-24 flex items-center justify-center overflow-hidden">
+      class="closer-look-section relative w-full py-16 md:py-24 flex items-center justify-center overflow-hidden">
       <!-- Background Pattern -->
       <div
         class="absolute inset-0 w-full h-full z-0 opacity-10 bg-[url('./public/get-a-closer-look-bg.png')] bg-cover bg-top">
@@ -376,18 +373,16 @@
 
       <div class="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6">
         <div data-aos="fade-up"
-          class="closer-look-card relative w-full rounded-2xl overflow-hidden shadow-2xl group border border-white/10 aspect-square sm:aspect-video lg:aspect-[2.2/1] flex flex-col items-center justify-center">
-          <!-- Middle Image as Background -->
-          <div class="absolute inset-0 w-full h-full">
-            <img src="./public/get-a-closer.jpg" alt="Layout Plan" class="object-cover" />
-          </div>
+          class="closer-look-card relative w-full rounded-2xl overflow-hidden shadow-2xl group border border-white/10 flex flex-col items-center justify-center">
 
-          <div class="relative z-10 px-4 sm:px-6 flex flex-col items-center justify-center text-center">
-            <!-- <h2 class="text-[24px] sm:text-4xl md:text-[2.75rem] font-semibold mb-6 text-[#F4D068] drop-shadow-md">
-              Get A Closer Look
-            </h2> -->
+          <!-- Image taking native aspect ratio -->
+          <img src="./public/get-a-closer.jpg" alt="Layout Plan" class="w-full h-auto object-cover block" />
+
+          <!-- Absolutely Centered Button Overlay -->
+          <div
+            class="absolute inset-0 z-10 px-4 sm:px-6 flex flex-col items-center justify-center text-center bg-[#161F48]/30 group-hover:bg-[#161F48]/50 transition-colors duration-300 backdrop-blur-[2px]">
             <button
-              class="modal-open bg-[#4a5fbd] hover:bg-[#3a4ca0] text-white text-[14px] sm:text-base font-medium px-4 py-2 sm:px-8 sm:py-2.5 rounded-lg transition-colors shadow-lg">
+              class="modal-open bg-[#4a5fbd] hover:bg-[#3a4ca0] text-white text-[14px] sm:text-base font-medium px-6 py-3 sm:px-8 sm:py-3 rounded-lg transition-all shadow-xl hover:-translate-y-0.5">
               Download layout
             </button>
           </div>
@@ -524,49 +519,53 @@
 
       <!-- Content -->
       <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center">
-        <h2 data-aos="fade-down" class="text-[24px] sm:text-4xl lg:text-[2.75rem] font-semibold mb-16 w-full leading-normal text-center text-transparent bg-clip-text bg-gradient-to-b from-hf-gold-2 to-hf-gold drop-shadow-md">
+        <h2 data-aos="fade-down"
+          class="text-[24px] sm:text-4xl lg:text-[2.75rem] font-semibold mb-16 w-full leading-normal text-center text-transparent bg-clip-text bg-gradient-to-b from-hf-gold-2 to-hf-gold drop-shadow-md">
           Execution matters more than promise
         </h2>
 
-        <div class="problems-grid grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-6xl mx-auto">
+        <div class="problems-grid grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-6xl mx-auto">
           <!-- Item 1 -->
           <div data-aos="fade-up" data-aos-delay="0"
-            class="problem-item bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-6 lg:p-8 flex flex-row items-center gap-4 sm:gap-6 hover:bg-white/10 transition-all duration-300 shadow-xl text-left">
+            class="problem-item bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md border border-white/20 rounded-2xl p-5 sm:p-6 lg:p-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 hover:bg-white/10 transition-all duration-300 shadow-xl text-center sm:text-left">
             <img src="./public/luxury-homes-icon-1.png" alt="Developed with NBCC"
-              class="w-12 h-12 sm:w-16 sm:h-16 shrink-0 object-contain drop-shadow-md" />
-            <p class="text-[14px] sm:text-[1.15rem] font-medium leading-snug text-white">Developed with NBCC (India) Limited</p>
+              style="width: 64px; height: 64px; flex-shrink: 0; object-fit: contain;" class="drop-shadow-md" />
+            <p class="text-[14px] sm:text-[1.15rem] font-medium leading-snug text-white">Developed with NBCC (India)
+              Limited</p>
           </div>
 
           <!-- Item 2 -->
           <div data-aos="fade-up" data-aos-delay="100"
-            class="problem-item bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-6 lg:p-8 flex flex-row items-center gap-4 sm:gap-6 hover:bg-white/10 transition-all duration-300 shadow-xl text-left">
+            class="problem-item bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md border border-white/20 rounded-2xl p-5 sm:p-6 lg:p-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 hover:bg-white/10 transition-all duration-300 shadow-xl text-center sm:text-left">
             <img src="./public/luxury-homes-icon-2.png" alt="Supreme Court monitored development"
-              class="w-12 h-12 sm:w-16 sm:h-16 shrink-0 object-contain drop-shadow-md" />
-            <p class="text-[14px] sm:text-[1.15rem] font-medium leading-snug text-white">Supreme Court monitored development</p>
+              style="width: 64px; height: 64px; flex-shrink: 0; object-fit: contain;" class="drop-shadow-md" />
+            <p class="text-[14px] sm:text-[1.15rem] font-medium leading-snug text-white">Supreme Court monitored
+              development</p>
           </div>
 
           <!-- Item 3 -->
           <div data-aos="fade-up" data-aos-delay="200"
-            class="problem-item bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-6 lg:p-8 flex flex-row items-center gap-4 sm:gap-6 hover:bg-white/10 transition-all duration-300 shadow-xl text-left">
+            class="problem-item bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md border border-white/20 rounded-2xl p-5 sm:p-6 lg:p-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 hover:bg-white/10 transition-all duration-300 shadow-xl text-center sm:text-left">
             <img src="./public/luxury-homes-icon-3.png" alt="Limited inventory ensures focus on delivery"
-              class="w-12 h-12 sm:w-16 sm:h-16 shrink-0 object-contain drop-shadow-md" />
-            <p class="text-[14px] sm:text-[1.15rem] font-medium leading-snug text-white">Limited inventory ensures focus on delivery</p>
+              style="width: 64px; height: 64px; flex-shrink: 0; object-fit: contain;" class="drop-shadow-md" />
+            <p class="text-[14px] sm:text-[1.15rem] font-medium leading-snug text-white">Limited inventory ensures focus
+              on delivery</p>
           </div>
-
-
         </div>
       </div>
     </section>
 
     <!-- We Help Section -->
-    <section id="help-section" class="relative w-full min-h-screen bg-[#161F48] overflow-hidden py-16 md:py-24 flex flex-col justify-center">
+    <section id="help-section"
+      class="relative w-full min-h-screen bg-[#161F48] overflow-hidden py-16 md:py-24 flex flex-col justify-center">
 
       <!-- Background Image -->
       <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <img src="./public/we-help-blueprint.png" alt="Blueprint Background" class="object-cover object-center w-full h-full" />
+        <img src="./public/we-help-blueprint.png" alt="Blueprint Background"
+          class="object-cover object-top md:object-center w-full h-full" />
       </div>
 
-      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="relative z-10 w-full max-w-7xl mx-auto sm:px-6">
         <!-- Heading -->
         <div id="help-heading" class="text-center mb-12 lg:mb-16">
           <h2 data-aos="fade-down"
@@ -579,18 +578,22 @@
         <div class="flex flex-col lg:flex-row w-full items-center justify-center gap-12 lg:gap-4 max-w-5xl mx-auto">
 
           <!-- Left Column (Pills) -->
-          <div id="help-pills" class="flex flex-col gap-4 lg:gap-8 w-full lg:w-7/12 px-2 sm:px-0">
+          <div id="help-pills"
+            class="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 lg:gap-8 w-full lg:w-7/12 px-2 sm:px-0">
             <div
               class="w-[95%] sm:w-fit bg-white/10 backdrop-blur-md border border-white/30 px-6 py-4 rounded-2xl sm:rounded-full shadow-2xl lg:ml-8 hover:bg-white/20 transition-colors">
-              <p class="text-white text-[14px] sm:text-base lg:text-lg font-medium">Unit selection based on yield potential</p>
+              <p class="text-white text-[14px] sm:text-base lg:text-lg font-medium">Unit selection based on yield
+                potential</p>
             </div>
             <div
               class="w-[95%] sm:w-fit bg-white/10 backdrop-blur-md border border-white/30 px-6 py-4 rounded-2xl sm:rounded-full shadow-2xl lg:-ml-4 hover:bg-white/20 transition-colors">
-              <p class="text-white text-[14px] sm:text-base lg:text-lg font-medium">Tower positioning and floor advantage</p>
+              <p class="text-white text-[14px] sm:text-base lg:text-lg font-medium">Tower positioning and floor
+                advantage</p>
             </div>
             <div
               class="w-[95%] sm:w-fit bg-white/10 backdrop-blur-md border border-white/30 px-6 py-4 rounded-2xl sm:rounded-full shadow-2xl lg:-ml-4 hover:bg-white/20 transition-colors">
-              <p class="text-white text-[14px] sm:text-base lg:text-lg font-medium">Price benchmarking within the project</p>
+              <p class="text-white text-[14px] sm:text-base lg:text-lg font-medium">Price benchmarking within the
+                project</p>
             </div>
             <div
               class="w-[95%] sm:w-fit bg-white/10 backdrop-blur-md border border-white/30 px-6 py-4 rounded-2xl sm:rounded-full shadow-2xl lg:ml-8 hover:bg-white/20 transition-colors">
@@ -664,7 +667,7 @@
           <div class="absolute inset-0 bg-gradient-to-t from-[#161F48]/95 via-[#161F48]/30 to-transparent"></div>
 
           <div class="absolute bottom-0 left-0 w-full px-4 py-4 sm:p-12">
-            <h3 class="text-[24px] sm:text-3xl lg:text-4xl font-semibold text-white leading-snug drop-shadow-lg">
+            <h3 class="text-[16px] sm:text-3xl lg:text-4xl font-semibold text-white leading-snug drop-shadow-lg">
               A Well-Built Home Is Not Obvious<br>
               On Day One.<br>
               It Becomes Clear Over Time.
@@ -838,7 +841,7 @@
       <div
         class="relative w-full max-w-md bg-black/20 backdrop-blur-xl border border-white/20 rounded-2xl md:rounded-[2rem] p-5 sm:p-6 md:p-8 shadow-2xl">
         <button id="modal-close"
-          class="absolute z-3 top-4 right-4 sm:top-5 sm:right-5 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white/70 hover:text-white transition-all duration-300 cursor-pointer">
+          class="absolute z-3 top-4 right-4 sm:top-5 sm:right-5 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white/70 z-2 hover:text-white transition-all duration-300 cursor-pointer">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
 

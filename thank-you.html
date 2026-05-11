@@ -1,52 +1,86 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full antialiased">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - Sobha Rivana</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        'hf-navy': '#161F48',
-                        'hf-royal-blue': '#163548',
-                        'hf-gold': '#CCA14D',
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Sobha Rivana</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS (which includes Tailwind) -->
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    .from-hf-gold-2 {
+      --tw-gradient-from: #FFED7E var(--tw-gradient-from-position);
+      --tw-gradient-to: rgba(255, 237, 126, 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .to-hf-gold {
+      --tw-gradient-to: #CCA14D var(--tw-gradient-to-position);
+    }
+  </style>
 </head>
-<body class="min-h-full font-sans bg-[#161F48] text-white">
-    <main class="min-h-screen bg-hf-navy text-white flex items-center justify-center font-sans">
-      <div class="bg-[#163548]/50 backdrop-blur-md border border-[#CCA14D]/30 p-12 rounded-3xl text-center max-w-lg mx-4">
-        <i data-lucide="check-circle" class="w-20 h-20 text-[#CCA14D] mx-auto mb-6"></i>
-        <h1 class="font-serif text-4xl mb-4">Thank You!</h1>
-        <p class="text-gray-300 mb-8 font-light tracking-wide text-lg">
-          Your inquiry has been successfully submitted. One of our premium property advisors will contact you shortly.
-        </p>
-        <a 
-          href="./index.html" 
-          class="inline-block bg-[#CCA14D] text-[#161F48] px-8 py-3 rounded-full font-medium hover:bg-white transition-colors duration-300"
-        >
-          Return Home
-        </a>
+
+<body class="min-h-screen flex flex-col font-sans bg-[#161F48] text-white overflow-hidden">
+
+  <!-- Background -->
+  <div class="absolute inset-0 w-full h-full z-0 bg-[url('./public/hero-bg.jpg')] bg-cover bg-bottom">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+  </div>
+
+  <main class="relative z-10 w-full min-h-screen flex items-center justify-center p-4">
+    <div data-aos="zoom-in" data-aos-duration="800"
+      class="bg-white/10 backdrop-blur-md border border-white/30 rounded-[2rem] text-center max-w-lg mx-auto shadow-2xl w-full flex flex-col items-center gap-6"
+      style="padding: clamp(2rem, 6vw, 3.5rem);">
+
+      <!-- Check Icon -->
+      <div class="w-20 h-20 rounded-full flex items-center justify-center"
+        style="background: linear-gradient(to bottom right, #FFED7E, #CCA14D); box-shadow: 0 0 30px rgba(204,161,77,0.4);">
+        <i data-lucide="check" class="w-10 h-10" style="color: #161F48;" stroke-width="3"></i>
       </div>
-    </main>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
+
+      <h1
+        class="text-4xl md:text-5xl font-sans font-semibold bg-gradient-to-b from-hf-gold-2 to-hf-gold bg-clip-text text-transparent drop-shadow-md">
+        Thank You!
+      </h1>
+
+      <p class="text-white/90 text-[16px] md:text-lg leading-relaxed font-light mb-2">
+        Your inquiry has been successfully submitted.<br class="hidden sm:block">
+        One of our premium property advisors will contact you shortly.
+      </p>
+
+      <a href="./index.html"
+        class="group relative rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 overflow-hidden w-full sm:w-auto"
+        style="display: flex; flex-direction: row; align-items: center; justify-content: center; padding: 14px 32px; background-color: #CCA14D; color: #161F48; white-space: nowrap; gap: 8px;">
+        <span class="relative z-10 whitespace-nowrap">Return Home</span>
+        <i data-lucide="arrow-right"
+          class="w-5 h-5 shrink-0 relative z-10 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </div>
+  </main>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    lucide.createIcons();
+    AOS.init({
+      once: true,
+      offset: 50,
+    });
+  </script>
 </body>
+
 </html>
